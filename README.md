@@ -15,7 +15,7 @@ If you don't have Python installed on your system, you can download and install 
 ### Cloning the repository
 You can clone the repository using Git with the following command:
 ```
-git clone https://github.com/AG1-NUIW-Kolleg/king_markov.git
+git clone https://github.com/veit1337/ebay_offer_generator.git
 ```
 
 ### Creating a Local Virtual Environment
