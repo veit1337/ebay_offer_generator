@@ -21,5 +21,5 @@ class EquipmentEntry():
         self.quantity = quantity
 
     def __str__(self):
-        entry_str = f'{self._quantity}x {self._description}'
+        entry_str = f'{self._quantity}x {self._description}\n'
         return entry_str

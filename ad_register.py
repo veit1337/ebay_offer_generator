@@ -118,11 +118,11 @@ ads=[
         'Dann lass Dich und Deine Gäste von 3BPM mit unserer Lichttechnik und dem Paket “Pro” eine perfekte Party haben!\n'
     )
 ]
-equipment_intro = 'In dem Paket enthalten:\n'
+equip_intro = '\n\nIn dem Paket enthalten:\n\n'
 
-desc_outro = ('Des Weiteren bieten wir von einer kompletten Musikanlage über einzelne Fullrange Lautsprecher und Subwoofer bis hin zum Rundum-sorglos-Paket alles an. Auch mit vielen weiteren Lichtern, Nebelmaschine, kabelgebundenem Mikrofon und Funkmikrofon sind wir ausgestattet.\n'+
-              'Lass dich von unseren Bildern inspirieren.\n'+
+desc_outro = ('\n\nDes Weiteren bieten wir von einer kompletten Musikanlage über einzelne Fullrange Lautsprecher und Subwoofer bis hin zum Rundum-sorglos-Paket alles an. Auch mit vielen weiteren Lichtern, Nebelmaschine, kabelgebundenem Mikrofon und Funkmikrofon sind wir ausgestattet.\n'+
+              'Lass dich von unseren Bildern inspirieren.\n\n'+
               'instagram.com/threebpm/\n'+
               'www.threebpm.de\n'+
-              'Wenn Du noch keinen DJ hast, kannst du unseren DJ Veit von – 3 BPM – direkt mitbuchen.\n'+
-              'Wir freuen uns auf Deine Anfrage')
+              '\n\nWenn Du noch keinen DJ hast, kannst du unseren DJ Veit von – 3 BPM – direkt mitbuchen.\n\n'+
+              'Wir freuen uns auf Deine Anfrage!')

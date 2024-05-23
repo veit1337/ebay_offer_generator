@@ -4,7 +4,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
 from ad_register import ads
+from ad_register import equip_intro
+from ad_register import desc_outro
 
+for ad in ads:
+    print(ad)
 
 driver_path = r"C:\Users\ve1t\Downloads\chromedriver-win64\chromedriver-win64\chromedriver"
 url = 'https://www.kleinanzeigen.de/p-anzeige-aufgeben-schritt2.html'
@@ -39,20 +43,14 @@ for ad in ads:
 
     # add description
     field_element = driver.find_element(By.ID, "pstad-descrptn")
-    field_element.send_keys(ad.description)
+    description_str = ad.description
+    description_str += equip_intro
+    for entry in ad.equipment:
+        description_str += entry.__str__()
+    description_str += desc_outro
+    field_element.send_keys(description_str)
 
     i += 1
 
 input("Press Enter to close the browser...")
 driver.quit()
-
-
-# intro
-
-# phrase
-
-# equipment
-
-# dj
-
-# outro
