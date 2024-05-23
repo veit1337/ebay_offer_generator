@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 import time
 from ad_register import ads
 from ad_register import equip_intro
@@ -16,12 +15,10 @@ url = 'https://www.kleinanzeigen.de/p-anzeige-aufgeben-schritt2.html'
 # adding user profile
 chrome_options = Options()
 chrome_options.add_argument(r"--user-data-dir=C:\Users\ve1t\AppData\Local\Google\Chrome\User Data")
-chrome_options.add_argument(r"--profile-directory=Profile 2")  # Use your specific profile name here
-
+chrome_options.add_argument(r"--profile-directory=Profile 2")
 # Initializing the WebDriver
 driver = webdriver.Chrome(options=chrome_options)
 
-# Open 10 tabs and navigate to the website
 for ad in ads:
     driver.execute_script(f"window.open('{url}', '_blank');")
 
