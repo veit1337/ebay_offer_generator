@@ -1,11 +1,14 @@
 import prettytable
 
+from equipment_entry import EquipmentEntry
+
 class Advertisment:
 
-    def __init__(self, title='None', price=0.0, description='None'):
+    def __init__(self, title='None', price=0.0, equipment=[], description_intro='None'):
         self._title = title
         self._price = price # in €
-        self._description = description
+        self._equipment: list[EquipmentEntry] = equipment
+        self._description = description_intro
 
     @property
     def title(self):
@@ -24,6 +27,14 @@ class Advertisment:
         self._price = price
 
     @property
+    def equipment(self):
+        return self._equipment
+
+    @equipment.setter
+    def equipment(self, equipment: list):
+        self._equipment = equipment
+
+    @property
     def description(self):
         return self._description
 
@@ -35,5 +46,7 @@ class Advertisment:
         table = prettytable.PrettyTable(['advertisement', ''])
         table.add_row(['title', self._title])
         table.add_row(['price', f'{self._price} €'])
-        table.add_row(['description', self._description])
+        table.add_row(['description_intro', self._description])
+        for item in self._equipment:
+            table.add_row(['', item])
         return str(table)

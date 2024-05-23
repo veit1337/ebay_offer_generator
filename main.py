@@ -26,12 +26,33 @@ time.sleep(3)
 
 i = 0
 for ad in ads:
+    # switch windo
     driver.switch_to.window(driver.window_handles[i+1])
+
+    # add title
     field_element = driver.find_element(By.ID, "postad-title")
     field_element.send_keys(ad.title)
+
+    # add price
     field_element = driver.find_element(By.ID, "micro-frontend-price")
     field_element.send_keys(int(ad.price))
+
+    # add description
+    field_element = driver.find_element(By.ID, "pstad-descrptn")
+    field_element.send_keys(ad.description)
+
     i += 1
 
 input("Press Enter to close the browser...")
 driver.quit()
+
+
+# intro
+
+# phrase
+
+# equipment
+
+# dj
+
+# outro
