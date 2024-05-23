@@ -20,6 +20,6 @@ class EquipmentEntry():
     def quantity(self, quantity: int):
         self.quantity = quantity
 
-    def as_str(self):
+    def __str__(self):
         entry_str = f'{self._quantity}x {self._description}'
         return entry_str
