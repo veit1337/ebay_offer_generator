@@ -4,11 +4,11 @@ from equipment_entry import EquipmentEntry
 
 class Advertisment:
 
-    def __init__(self, title='None', price=0.0, equipment=[], description_intro='None'):
+    def __init__(self, title='None', price=0.0, equipment=[], description='None'):
         self._title = title
         self._price = price # in €
         self._equipment: list[EquipmentEntry] = equipment
-        self._description = description_intro
+        self._description = description
 
     @property
     def title(self):
@@ -46,7 +46,8 @@ class Advertisment:
         table = prettytable.PrettyTable(['advertisement', ''])
         table.add_row(['title', self._title])
         table.add_row(['price', f'{self._price} €'])
-        table.add_row(['description_intro', self._description])
-        for item in self._equipment:
-            table.add_row(['', item])
+        table.add_row(['description', self._description])
+        table.add_row(['equipment', '----------'])
+        for entry in self._equipment:
+            table.add_row(['', entry.__str__()])
         return str(table)
